@@ -2,6 +2,7 @@ package view
 
 import (
 	"fmt"
+
 	"github.com/awesome-gocui/gocui"
 	"github.com/sirupsen/logrus"
 	"github.com/spf13/viper"
@@ -199,7 +200,7 @@ func (v *Layer) PageUp() error {
 
 // CursorDown moves the cursor down in the layer pane (selecting a higher layer).
 func (v *Layer) CursorDown() error {
-	if v.vm.LayerIndex < len(v.vm.Layers) {
+	if v.vm.LayerIndex+1 < len(v.vm.Layers) {
 		err := CursorDown(v.gui, v.view)
 		if err == nil {
 			return v.SetCursor(v.vm.LayerIndex + 1)
