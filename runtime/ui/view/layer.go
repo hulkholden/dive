@@ -339,8 +339,8 @@ func (v *Layer) Render() error {
 				logrus.Debug("unable to write to buffer: ", err)
 				return err
 			}
-
 		}
+		v.view.SetCursor(0, v.vm.LayerIndex)
 		return nil
 	})
 	return nil
