@@ -1,6 +1,6 @@
 module github.com/wagoodman/dive
 
-go 1.17
+go 1.20
 
 require (
 	github.com/awesome-gocui/gocui v1.1.0
